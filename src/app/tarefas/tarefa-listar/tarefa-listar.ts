@@ -32,7 +32,7 @@ export class TarefaListar {
     this.tarefaService.listar().subscribe({
       // next é um caso de sucesso
       next: tarefas => {
-        const tarefasOrdenadas = tarefas.sort((x, y) => x.descricao.localeCompare(y.descricao));
+        const tarefasOrdenadas = tarefas.sort((x, y) => y.prioridade! - x.prioridade!);
         this.tarefas.set(tarefasOrdenadas);
       },
       //error é o caso de falha
@@ -46,8 +46,12 @@ export class TarefaListar {
   }
 
   apagar(id: string): void {
-    this.tarefas.update(tarefas => tarefas.filter(x => x.id !== id))
-    const tarefasString = JSON.stringify(this.tarefas());
-    localStorage.setItem("tarefas", tarefasString);
+    this.tarefaService.apagar(id).subscribe({
+      next: () => {
+        alert("Tarefa apagada com sucesso");
+        this.carregarTarefas();
+      }, error: erro => {console.error("Erro ao apagar as tarefas:", erro);
+        alert("Não foi possivel apagar as tarefas")}
+    })
   }
 }
