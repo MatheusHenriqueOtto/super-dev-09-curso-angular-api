@@ -1,7 +1,7 @@
 .navbar {
     background: linear-gradient(135deg, #0f172a, #0f766e);
     color: white;
-    padding: 16px 32px;
+    padding: 14px 32px;
     box-sizing: border-box;
 
     display: flex;
@@ -17,11 +17,12 @@
 .navbar-logo a {
     color: white;
     text-decoration: none;
-    font-size: 22px;
-    font-weight: bold;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
     padding: 8px 12px;
     border-radius: 8px;
-    transition: 0.3s;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .navbar-logo a:hover {
@@ -29,22 +30,24 @@
 }
 
 .navbar-logo a.ativo {
-    background-color: #facc15;
-    color: #0f172a;
+    background-color: #facc1500;
+    color: #ffffff;
 }
 
 .navbar-links {
     display: flex;
-    gap: 16px;
+    align-items: center;
+    gap: 8px;
 }
 
 .navbar-links a {
     color: white;
     text-decoration: none;
-    font-size: 16px;
-    padding: 8px 14px;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 8px 16px;
     border-radius: 8px;
-    transition: 0.3s;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .navbar-links a:hover {
@@ -52,7 +55,7 @@
 }
 
 .navbar-links a.ativo {
-    background-color: #facc15;
-    color: #0f172a;
-    font-weight: bold;
+    background-color: #facc1500;
+    color: #ffffff82;
+    font-weight: 600;
 }
