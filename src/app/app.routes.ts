@@ -5,6 +5,9 @@ import { TarefaEditar } from './tarefas/tarefa-editar/tarefa-editar';
 import { ProjetoListar } from './projetos/projeto-listar/projeto-listar';
 import { ProjetoEditar } from './projetos/projeto-editar/projeto-editar';
 import { ProjetoCadastrar } from './projetos/projeto-cadastrar/projeto-cadastrar';
+import { RelatorioFinanceiroCadastrar } from './relatorios-financeiros/relatorio-financeiro-cadastrar/relatorio-financeiro-cadastrar';
+import { RelatorioFinanceiroListar } from './relatorios-financeiros/relatorio-financeiro-listar/relatorio-financeiro-listar';
+import { RelatorioFinanceiroEditar } from './relatorios-financeiros/relatorio-financeiro-editar/relatorio-financeiro-editar';
 
 export const routes: Routes = [
 
@@ -15,4 +18,8 @@ export const routes: Routes = [
     { path: "projetos/cadastrar", loadComponent: () => ProjetoCadastrar},
     { path: "projetos", loadComponent: () => ProjetoListar},
     { path: "projetos/editar/:id", loadComponent: () => ProjetoEditar},
+
+    { path: "relatorios-financeiros/cadastrar", loadComponent: () => RelatorioFinanceiroCadastrar},
+    { path: "relatorios-financeiros", loadComponent: () => RelatorioFinanceiroListar},
+    { path: "relatorios-Financeiros/editar/:id", loadComponent: () => RelatorioFinanceiroEditar},
 ];
