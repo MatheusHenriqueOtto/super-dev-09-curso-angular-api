@@ -1,0 +1,12 @@
+<h1>Cadastrar Evento</h1>
+
+<label for="titulo">Titulo</label>
+<input type="text" [(ngModel)]="evento().titulo" id="titulo" placeholder="Digite o nome do evento">
+
+<label for="local">Local</label>
+<input type="text" [(ngModel)]="evento().local" id="local" placeholder="Digite onde é o evento">
+
+<label for="custo">Custo</label>
+<input type="number" [(ngModel)]="evento().custo" id="custo" placeholder="Quanto vai custar o evento">
+
+<button (click)="salvar()">Salvar</button>

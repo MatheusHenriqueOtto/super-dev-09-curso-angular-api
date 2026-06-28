@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { environment } from '../../environments/environment';
 import { RelatorioFinanceiroModel } from '../models/relatorio-finaceiro.model';
 import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
@@ -16,8 +16,16 @@ export class RelatorioFinanceiroService {
   }
 
   cadastrar(relatorioFinanceiro: RelatorioFinanceiroModel): Observable<RelatorioFinanceiroModel> {
-    return this.http.post(this.baseUrl, relatorioFinanceiro);
-  } 
+    return this.http.post<RelatorioFinanceiroModel>(this.baseUrl, relatorioFinanceiro);
+  }
 
+  apagar(id: number): Observable<void>{
+    return this.http.delete<void>(`${this.baseUrl}/${id}`);
+  }
 
+  obterPorId(id: number): Observable<RelatorioFinanceiroModel>{
+    return this.http.get<RelatorioFinanceiroModel>(`${this.baseUrl}/${id}`);
+  }
+  
+  
 }

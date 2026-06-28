@@ -1,1 +1,31 @@
-<p>relatorio-financeiro-listar works!</p>
+<h1>Relatorios Financeiros</h1>
+
+<a routerLink="/relatorios-financeiros/cadastrar" class="cadastrar">Cadastrar Relatorio</a>
+
+<span>Quantidade de relatorios: <span class="quantidade">{{relatoriosFinanceiros().length}}</span></span>
+
+<table>
+    <thead>
+        <th>Data de Emissão</th>
+        <th>Titulo</th>
+        <th>Tipo</th>
+        <th>Valor Total</th>
+        <th>Responssavel</th>
+        <th>Ações</th>
+    </thead>
+    <tbody>
+        @for (relatorioFinanceiro of relatoriosFinanceiros(); track relatorioFinanceiro.id) {
+            <tr>
+                <td>{{relatorioFinanceiro.dataEmissao}}</td>
+                <td>{{relatorioFinanceiro.titulo}}</td>
+                <td>{{relatorioFinanceiro.tipo}}</td>
+                <td>{{relatorioFinanceiro.valorTotal}}</td>
+                <td>{{relatorioFinanceiro.responsavel}}</td>
+                <td>
+                    <a class="editar" routerLink="/relatorios-financeiros/editar">Editar</a>
+                    <button class="apagar" (click)="apagar(relatorioFinanceiro.id)">Apagar</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

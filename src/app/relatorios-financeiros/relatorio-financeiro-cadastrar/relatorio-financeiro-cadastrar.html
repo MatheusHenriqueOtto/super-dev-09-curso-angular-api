@@ -1,1 +1,19 @@
-<p>relatorio-financeiro-cadastrar works!</p>
+<h1>Cadastrar Releatorio Financeiro</h1>
+
+<label for="titulo">Titulo</label>
+<input type="text" [(ngModel)]="relatorioFinanceiro().titulo" id="titulo">
+
+<label for="tipo">Tipo</label>
+<input type="text" [(ngModel)]="relatorioFinanceiro().tipo" id="tipo">
+
+<label for="valor-total">Valor Total</label>
+<input type="number" [(ngModel)]="relatorioFinanceiro().valorTotal" id="valor-total">
+
+<label for="data-emissao">Data de Emissao</label>
+<input type="date" [(ngModel)]="relatorioFinanceiro().dataEmissao" id="data-emissao">
+
+<label for="responssavel">Responssável</label>
+<input type="text" [(ngModel)]="relatorioFinanceiro().responsavel" id="responssavel">
+
+
+<button (click)="salvar()">Salvar</button>

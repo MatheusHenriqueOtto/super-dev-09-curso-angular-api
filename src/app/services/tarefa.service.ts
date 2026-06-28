@@ -24,8 +24,7 @@ export class TarefaService {
   }
 
   apagar(id: string): Observable<void>{
-    const url = `${this.baseUrl}/${id}`;
-    return this.http.delete<void>(url);
+    return this.http.delete<void>(`${this.baseUrl}/${id}`);
   }
 
   obterPorId(id: string): Observable<TarefaModel>{

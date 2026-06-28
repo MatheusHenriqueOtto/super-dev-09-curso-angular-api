@@ -29,7 +29,7 @@ export class TarefaCadastrar {
       },
       error: erro => {
         console.error("Erro ao cadastrar tarefa: " + erro);
-        alert("Ocoeewu um erro ao cadastrar tarefa");
+        alert("Ocorreu um erro ao cadastrar tarefa");
       }
     })
   }

@@ -8,6 +8,10 @@ import { ProjetoCadastrar } from './projetos/projeto-cadastrar/projeto-cadastrar
 import { RelatorioFinanceiroCadastrar } from './relatorios-financeiros/relatorio-financeiro-cadastrar/relatorio-financeiro-cadastrar';
 import { RelatorioFinanceiroListar } from './relatorios-financeiros/relatorio-financeiro-listar/relatorio-financeiro-listar';
 import { RelatorioFinanceiroEditar } from './relatorios-financeiros/relatorio-financeiro-editar/relatorio-financeiro-editar';
+import { EventoCadastrar } from './eventos/evento-cadastrar/evento-cadastrar';
+import { EventoListar } from './eventos/evento-listar/evento-listar';
+import { EventoEditar } from './eventos/evento-editar/evento-editar';
+
 
 export const routes: Routes = [
 
@@ -22,4 +26,8 @@ export const routes: Routes = [
     { path: "relatorios-financeiros/cadastrar", loadComponent: () => RelatorioFinanceiroCadastrar},
     { path: "relatorios-financeiros", loadComponent: () => RelatorioFinanceiroListar},
     { path: "relatorios-Financeiros/editar/:id", loadComponent: () => RelatorioFinanceiroEditar},
+
+    { path: "eventos/cadastrar", loadComponent: () => EventoCadastrar},
+    { path: "eventos", loadComponent: () => EventoListar},
+    { path: "eventos/editar", loadComponent: () => EventoEditar},
 ];
