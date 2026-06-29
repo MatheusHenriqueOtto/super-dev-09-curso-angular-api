@@ -25,9 +25,9 @@ export const routes: Routes = [
 
     { path: "relatorios-financeiros/cadastrar", loadComponent: () => RelatorioFinanceiroCadastrar},
     { path: "relatorios-financeiros", loadComponent: () => RelatorioFinanceiroListar},
-    { path: "relatorios-Financeiros/editar/:id", loadComponent: () => RelatorioFinanceiroEditar},
+    { path: "relatorios-financeiros/editar/:id", loadComponent: () => RelatorioFinanceiroEditar},
 
     { path: "eventos/cadastrar", loadComponent: () => EventoCadastrar},
     { path: "eventos", loadComponent: () => EventoListar},
-    { path: "eventos/editar", loadComponent: () => EventoEditar},
+    { path: "eventos/editar/:id", loadComponent: () => EventoEditar},
 ];

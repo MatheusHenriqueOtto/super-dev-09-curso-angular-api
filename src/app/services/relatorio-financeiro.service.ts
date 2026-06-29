@@ -19,13 +19,15 @@ export class RelatorioFinanceiroService {
     return this.http.post<RelatorioFinanceiroModel>(this.baseUrl, relatorioFinanceiro);
   }
 
-  apagar(id: number): Observable<void>{
+  apagar(id: string): Observable<void>{
     return this.http.delete<void>(`${this.baseUrl}/${id}`);
   }
 
-  obterPorId(id: number): Observable<RelatorioFinanceiroModel>{
+  obterPorId(id: string): Observable<RelatorioFinanceiroModel>{
     return this.http.get<RelatorioFinanceiroModel>(`${this.baseUrl}/${id}`);
   }
   
-  
+  editar(id: string, relatorioFinanceiro: RelatorioFinanceiroModel): Observable<void>{
+    return this.http.put<void>(`${this.baseUrl}/${id}`, relatorioFinanceiro);
+  }
 }

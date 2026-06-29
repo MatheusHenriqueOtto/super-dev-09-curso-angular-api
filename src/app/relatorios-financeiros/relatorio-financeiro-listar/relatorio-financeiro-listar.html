@@ -22,7 +22,7 @@
                 <td>{{relatorioFinanceiro.valorTotal}}</td>
                 <td>{{relatorioFinanceiro.responsavel}}</td>
                 <td>
-                    <a class="editar" routerLink="/relatorios-financeiros/editar">Editar</a>
+                    <a class="editar" routerLink="/relatorios-financeiros/editar/{{relatorioFinanceiro.id}}">Editar</a>
                     <button class="apagar" (click)="apagar(relatorioFinanceiro.id)">Apagar</button>
                 </td>
             </tr>

@@ -15,7 +15,7 @@ export class RelatorioFinanceiroCadastrar {
   private readonly router = inject(Router)
 
   relatorioFinanceiro = signal<RelatorioFinanceiroModel>({
-    id: 0,
+    id: "",
     titulo: "",
     tipo: "",
     valorTotal: 0,
